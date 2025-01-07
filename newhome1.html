@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Analysis App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("E:\news\flask\templates\download.jpg"); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, p {
+            color: #f8f9fa;
+        }
+
+        .btn {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="display-4">Welcome to News Analysis App</h1>
+        <p class="lead">Analyze news articles, classify text, and generate insightful reports.</p>
+        <div class="mt-4">
+            <a href="/generate_report" class="btn btn-primary btn-lg">Generate News Report</a>
+            <a href="/classify" class="btn btn-secondary btn-lg">Classify News</a>
+        </div>
+    </div>
+</body>
+</html>

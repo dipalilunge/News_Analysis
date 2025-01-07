@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">News Report</h2>
+        {% if news_list %}
+        <table class="table table-bordered mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Translation</th>
+                    <th>Sentiment</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for news in news_list %}
+                <tr>
+                    <td>{{ news.Date }}</td>
+                    <td>{{ news.title }}</td>
+                    <td>{{ news.translation }}</td>
+                    <td>{{ news.Sentiment }}</td>
+                    <td><a href="{{ news.link }}" target="_blank">Read More</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="text-center text-muted">No news found for the given criteria.</p>
+        {% endif %}
+        <div class="text-center mt-4">
+            <a href="/generate_report" class="btn btn-primary">Generate Another Report</a>
+        </div>
+    </div>
+</body>
+</html>

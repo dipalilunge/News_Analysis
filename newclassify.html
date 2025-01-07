@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classify Text</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Classify News</h2>
+        <form method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="user_input" class="form-label">Enter News</label>
+                <textarea id="user_input" name="user_input" class="form-control" rows="4" placeholder="Enter News headline to classify" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Classify</button>
+        </form>
+        {% if result %}
+        <div class="alert alert-success mt-4">
+            <strong>Classification Result:</strong> {{ result }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
